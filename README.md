@@ -14,8 +14,8 @@ Este é meu site pessoal criado por mim. Aqui você encontrará informações so
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/ezequielmuller/portfolio-ezequielhgmuller.git
-cd portfolio-ezequielhgmuller
+git clone https://github.com/ezequielmuller/site-ezequielhgmuller.git
+cd site-ezequielhgmuller
 ```
 
 2. Instale as dependecia
