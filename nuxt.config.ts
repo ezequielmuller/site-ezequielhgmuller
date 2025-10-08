@@ -6,12 +6,11 @@ export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxt/image', '@nuxt/eslint'],
   css: ['~/assets/css/main.css'],
   vite: {
-    plugins: [
-      tailwindcss(),
-    ],
+    plugins: [tailwindcss()],
   },
   typescript: {
     strict: true,
     typeCheck: true
-  }
+  },
+  components: true
 })
