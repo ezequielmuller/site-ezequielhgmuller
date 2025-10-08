@@ -7,7 +7,7 @@ const route = useRoute()
 const items = computed<NavigationMenuItem[]>(() => [{
   label: 'Sobre Mim',
   to: '/docs/getting-started',
-  icon: 'solar:user-id-bold',
+  icon: 'gala:portrait2',
   active: route.path.startsWith('/docs/getting-started')
 }, {
   label: 'Carreira',
@@ -28,15 +28,24 @@ const items = computed<NavigationMenuItem[]>(() => [{
 <template>
   <UHeader mode="slideover" class="border-b border-gray-200 dark:border-gray-800">
     <template #title>
-      <Logo />
+      <UIcon name="codex:curly-brackets" class="size-9" />
     </template>
     <UNavigationMenu :items="items" />
     <template #right>
-      <UColorModeButton />
-      <UTooltip text="Open on GitHub">
+      <UTooltip text="GitHub">
         <UButton color="neutral" variant="ghost" to="https://github.com/nuxt/ui" target="_blank"
           icon="i-simple-icons-github" aria-label="GitHub" />
       </UTooltip>
+      <UTooltip text="LinkedIn">
+        <UButton color="neutral" variant="ghost" to="https://github.com/nuxt/ui" target="_blank"
+          icon="entypo-social:linkedin" aria-label="GitHub" />
+      </UTooltip>
+      <UTooltip text="Instagram">
+        <UButton color="neutral" variant="ghost" to="https://github.com/nuxt/ui" target="_blank"
+          icon="entypo-social:instagram" aria-label="GitHub" />
+      </UTooltip>
+      <USeparator orientation="vertical" class="h-8" />
+      <UColorModeButton />
     </template>
     <template #body>
       <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5 p-4 space-y-2" />
