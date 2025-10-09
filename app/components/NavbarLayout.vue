@@ -1,34 +1,56 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
-import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { ref, computed, watch, onMounted } from 'vue'
+import type { NavigationMenuItem } from '@nuxt/ui'
+import { useColorMode } from '#imports'
+
+const colorMode = useColorMode()
+const logoSrc = ref('')
+
+// Atualiza logo quando tema muda
+const updateLogo = () => {
+  logoSrc.value =
+    colorMode.value === 'dark'
+      ? '/logo-branco-s_fundo.png'
+      : '/logo-s_fundo.png'
+}
+watch(() => colorMode.value, updateLogo)
+onMounted(() => {
+  colorMode.value = 'ligth'
+  updateLogo()
+})
+
 const route = useRoute()
+const items = computed<NavigationMenuItem[]>(() => [
+  {
+    label: 'Sobre Mim',
+    to: '/docs/getting-started',
+    icon: 'gala:portrait2',
+    active: route.path.startsWith('/docs/getting-started')
+  },
+  {
+    label: 'Carreira',
+    to: '/docs/components',
+    icon: 'clarity:briefcase-line',
+    active: route.path.startsWith('/docs/components')
+  },
+  {
+    label: 'Projetos',
+    icon: 'codicon:file-submodule',
+    to: 'https://go.nuxt.com/figma-ui'
+  },
+  {
+    label: 'Contato',
+    icon: 'fluent-emoji-high-contrast:envelope',
+    to: 'https://github.com/nuxt/ui/releases'
+  }
+])
 
-const items = computed<NavigationMenuItem[]>(() => [{
-  label: 'Sobre Mim',
-  to: '/docs/getting-started',
-  icon: 'gala:portrait2',
-  active: route.path.startsWith('/docs/getting-started')
-}, {
-  label: 'Carreira',
-  to: '/docs/components',
-  icon: 'clarity:briefcase-line',
-  active: route.path.startsWith('/docs/components')
-}, {
-  label: 'Projetos',
-  icon: 'codicon:file-submodule',
-  to: 'https://go.nuxt.com/figma-ui',
-}, {
-  label: 'Contato',
-  icon: 'fluent-emoji-high-contrast:envelope',
-  to: 'https://github.com/nuxt/ui/releases',
-}])
 </script>
-
 <template>
   <UHeader mode="slideover" class="border-b border-gray-200 dark:border-gray-800">
     <template #title>
-      <UIcon name="codex:curly-brackets" class="size-9" />
+      <img :src="logoSrc" alt="Logo Ezequiel Muller" class="h-20">
     </template>
     <UNavigationMenu :items="items" />
     <template #right>
