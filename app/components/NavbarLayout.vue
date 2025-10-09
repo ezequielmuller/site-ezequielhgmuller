@@ -50,7 +50,7 @@ const items = computed<NavigationMenuItem[]>(() => [
 <template>
   <UHeader mode="slideover" class="border-b border-gray-200 dark:border-gray-800">
     <template #title>
-      <img :src="logoSrc" alt="Logo Ezequiel Muller" class="h-20">
+      <NuxtImg :src="logoSrc" alt="Logo Ezequiel Muller" class="h-20" />
     </template>
     <UNavigationMenu :items="items" />
     <template #right>
