@@ -26,23 +26,27 @@ const items = computed<NavigationMenuItem[]>(() => [
     label: 'Sobre Mim',
     to: '/docs/getting-started',
     icon: 'gala:portrait2',
-    active: route.path.startsWith('/docs/getting-started')
+    active: route.path.startsWith('/docs/getting-started'),
+    class: 'mb-1'
   },
   {
     label: 'Carreira',
     to: '/docs/components',
     icon: 'clarity:briefcase-line',
-    active: route.path.startsWith('/docs/components')
+    active: route.path.startsWith('/docs/components'),
+    class: 'mb-1'
   },
   {
     label: 'Projetos',
     icon: 'codicon:file-submodule',
-    to: 'https://go.nuxt.com/figma-ui'
+    to: 'https://go.nuxt.com/figma-ui',
+    class: 'mb-1'
   },
   {
     label: 'Contato',
     icon: 'fluent-emoji-high-contrast:envelope',
-    to: 'https://github.com/nuxt/ui/releases'
+    to: 'https://github.com/nuxt/ui/releases',
+    class: 'mb-1'
   }
 ])
 
@@ -55,15 +59,15 @@ const items = computed<NavigationMenuItem[]>(() => [
     <UNavigationMenu :items="items" />
     <template #right>
       <UTooltip text="GitHub">
-        <UButton color="neutral" variant="ghost" to="https://github.com/nuxt/ui" target="_blank"
+        <UButton color="neutral" variant="ghost" to="https://github.com/ezequielmuller" target="_blank"
           icon="i-simple-icons-github" aria-label="GitHub" />
       </UTooltip>
       <UTooltip text="LinkedIn">
-        <UButton color="neutral" variant="ghost" to="https://github.com/nuxt/ui" target="_blank"
+        <UButton color="neutral" variant="ghost" to="https://www.linkedin.com/in/ezequielhgmuller/" target="_blank"
           icon="entypo-social:linkedin" aria-label="GitHub" />
       </UTooltip>
       <UTooltip text="Instagram">
-        <UButton color="neutral" variant="ghost" to="https://github.com/nuxt/ui" target="_blank"
+        <UButton color="neutral" variant="ghost" to="https://www.instagram.com/ezequielmuller__/" target="_blank"
           icon="entypo-social:instagram" aria-label="GitHub" />
       </UTooltip>
       <USeparator orientation="vertical" class="h-8" />
