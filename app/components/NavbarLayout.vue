@@ -27,26 +27,26 @@ const items = computed<NavigationMenuItem[]>(() => [
     to: '/docs/getting-started',
     icon: 'gala:portrait2',
     active: route.path.startsWith('/docs/getting-started'),
-    class: 'mb-1'
+    class: 'mb-1 cursor-pointer'
   },
   {
     label: 'Carreira',
     to: '/docs/components',
     icon: 'clarity:briefcase-line',
     active: route.path.startsWith('/docs/components'),
-    class: 'mb-1'
+    class: 'mb-1 cursor-pointer'
   },
   {
     label: 'Projetos',
     icon: 'codicon:file-submodule',
     to: 'https://go.nuxt.com/figma-ui',
-    class: 'mb-1'
+    class: 'mb-1 cursor-pointer'
   },
   {
     label: 'Contato',
     icon: 'fluent-emoji-high-contrast:envelope',
     to: 'https://github.com/nuxt/ui/releases',
-    class: 'mb-1'
+    class: 'mb-1 cursor-pointer'
   }
 ])
 
@@ -71,7 +71,7 @@ const items = computed<NavigationMenuItem[]>(() => [
           icon="entypo-social:instagram" aria-label="GitHub" />
       </UTooltip>
       <USeparator orientation="vertical" class="h-8" />
-      <UColorModeButton />
+      <UColorModeButton class="cursor-pointer"/>
     </template>
     <template #body>
       <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5 p-4 space-y-2" />
