@@ -1,6 +1,6 @@
 <template>
   <UApp>
-    <UProvider>
+    <UProvider :defaultColorMode="'light'">
       <UTooltipProvider>
         <NuxtLayout>
           <NuxtPage />

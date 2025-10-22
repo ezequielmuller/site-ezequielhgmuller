@@ -7,19 +7,15 @@ import { useColorMode } from '#imports'
 const colorMode = useColorMode()
 const logoSrc = ref('')
 
-// Atualiza logo quando tema muda
+// Atualiza logo quando tema muda ---
 const updateLogo = () => {
-  logoSrc.value =
-    colorMode.value === 'dark'
-      ? '/logo-branco-s_fundo.png'
-      : '/logo-s_fundo.png'
+  logoSrc.value = colorMode.value === 'dark' ? '/logo-branco-s_fundo.png' : '/logo-s_fundo.png'
 }
 watch(() => colorMode.value, updateLogo)
 onMounted(() => {
-  colorMode.value = 'ligth'
   updateLogo()
 })
-
+// Rotas do menu ---
 const route = useRoute()
 const items = computed<NavigationMenuItem[]>(() => [
   {
@@ -71,7 +67,7 @@ const items = computed<NavigationMenuItem[]>(() => [
           icon="entypo-social:instagram" aria-label="GitHub" />
       </UTooltip>
       <USeparator orientation="vertical" class="h-8" />
-      <UColorModeButton class="cursor-pointer"/>
+      <UColorModeButton class="cursor-pointer" />
     </template>
     <template #body>
       <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5 p-4 space-y-2" />
