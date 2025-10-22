@@ -2,18 +2,18 @@
   <div class="flex flex-col items-center mt-8 px-4 sm:px-6 md:px-10">
     <!-- sobre mim -->
     <div
-      class="text-center border-2 border-gray-200 dark:border-gray-700 rounded-3xl shadow-sm bg-white/80 dark:bg-gray-900/60 backdrop-blur-sm w-full max-w-3xl p-6">
-      <h1 class="text-[22px] font-semibold md:text-2xl mb-4 text-gray-800 dark:text-gray-100">
+      class="text-center  border border-gray-200 border-gray-400 dark:border-gray-700 border-2 rounded-3xl shadow-sm backdrop-blur-sm w-full max-w-3xl p-6">
+      <h1 class="text-[22px] font-medium md:text-2xl mb-4">
         Sobre mim
       </h1>
-      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-        Olá! Sou <span class="font-semibold text-primary-600">Ezequiel Henrique Gazolla Muller</span>, tenho 19 anos e
+      <p class="leading-relaxed">
+        Olá! Sou <span class="font-bold text-primary-600">Ezequiel Henrique Gazolla Muller</span>, tenho 19 anos e
         sou natural de Marcelino Ramos/RS.
         Atuo na área de Tecnologia da Informação e estou em constante evolução, sempre em busca de novos aprendizados e
         desafios.
-        Tenho foco em <span class="font-semibold">desenvolvimento web</span>, <span class="font-semibold">engenharia de
+        Tenho foco em <span class="font-bold">desenvolvimento web</span>, <span class="font-bold">engenharia de
           software</span>,
-        <span class="font-semibold">arquitetura de sistemas</span> e <span class="font-semibold">integração entre
+        <span class="font-bold">arquitetura de sistemas</span> e <span class="font-bold">integração entre
           front-end e back-end</span>.
         Estou sempre atualizado por meio de cursos, projetos próprios e estudos técnicos, buscando criar soluções
         inovadoras, eficientes e escaláveis.
@@ -21,15 +21,15 @@
     </div>
     <!-- habilidades -->
     <div class="flex flex-wrap justify-center gap-4 mt-7 w-full max-w-4xl text-center items-center">
-      <h1 class="basis-full text-[22px] font-semibold md:text-2xl  text-gray-800 dark:text-gray-100">
+      <h1 class="basis-full text-[22px] medium md:text-2xl">
         Habilidades
       </h1>
       <div v-for="(hab, idx) in habilidades" :key="idx"
-        class="group border border-gray-200 dark:border-gray-700 rounded-xl p-3 w-[150px] sm:w-[170px] bg-white/80 dark:bg-gray-900/50 
+        class="group border-2 border-gray-200 dark:border-gray-700  rounded-xl p-3 w-[150px] sm:w-[170px]
         shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-start gap-3 hover:-translate-y-0.5">
         <NuxtImg :src="hab.src" :alt="hab.label"
           :class="['transition-transform duration-300 group-hover:scale-105', hab.class]" />
-        <span class="font-medium text-gray-800 dark:text-gray-200 text-sm sm:text-base">
+        <span class="font-medium text-sm sm:text-base">
           {{ hab.label }}
         </span>
       </div>
