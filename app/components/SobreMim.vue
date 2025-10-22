@@ -1,35 +1,56 @@
 <template>
-  <div class="flex flex-col items-center mt-4 px-4 sm:px-6 md:px-8">
-    <div class="text-center border-2 rounded-3xl w-full max-w-3xl p-4">
-      <h1 class="text-[22px] font-medium md:text-2xl mb-3">Sobre mim</h1>
-      <p>
-        Olá! Sou Ezequiel Henrique Gazolla Muller, tenho 19 anos e sou natural de Marcelino Ramos/RS. Atuo na área de
-        Tecnologia da Informação e estou em constante evolução, sempre em busca de novos aprendizados e desafios. Tenho
-        foco em desenvolvimento web, engenharia de software, arquitetura de sistemas e integração entre front-end e
-        back-end. Procuro me manter atualizado por meio de cursos em diversas plataformas, projetos próprios e estudos
-        técnicos. Estou sempre disposto a aprender novas tecnologias, colaborar com equipes e contribuir para soluções
+  <div class="flex flex-col items-center mt-8 px-4 sm:px-6 md:px-10">
+    <!-- sobre mim -->
+    <div
+      class="text-center border-2 border-gray-200 dark:border-gray-700 rounded-3xl shadow-sm bg-white/80 dark:bg-gray-900/60 backdrop-blur-sm w-full max-w-3xl p-6">
+      <h1 class="text-[22px] font-semibold md:text-2xl mb-4 text-gray-800 dark:text-gray-100">
+        Sobre mim
+      </h1>
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+        Olá! Sou <span class="font-semibold text-primary-600">Ezequiel Henrique Gazolla Muller</span>, tenho 19 anos e
+        sou natural de Marcelino Ramos/RS.
+        Atuo na área de Tecnologia da Informação e estou em constante evolução, sempre em busca de novos aprendizados e
+        desafios.
+        Tenho foco em <span class="font-semibold">desenvolvimento web</span>, <span class="font-semibold">engenharia de
+          software</span>,
+        <span class="font-semibold">arquitetura de sistemas</span> e <span class="font-semibold">integração entre
+          front-end e back-end</span>.
+        Estou sempre atualizado por meio de cursos, projetos próprios e estudos técnicos, buscando criar soluções
         inovadoras, eficientes e escaláveis.
       </p>
     </div>
-    <div class="flex flex-wrap justify-center sm:justify-evenly md:justify-evenly gap-4 mt-6 w-full max-w-4xl text-center items-center">
-      <h1 class="basis-full text-[22px] font-medium md:text-2xl mb-2">Habilidades</h1>
-      <div v-for="(hab, idx) in habilidades" :key="idx" class="border rounded-xl p-3 w-[120px] sm:w-[140px] itens-center justify-evenly flex">
-         <NuxtImg :src="hab?.src" :alt="hab?.label" :class="hab?.class" />
-         <span class="font-medium">{{ hab?.label }}</span>
+    <!-- habilidades -->
+    <div class="flex flex-wrap justify-center gap-4 mt-7 w-full max-w-4xl text-center items-center">
+      <h1 class="basis-full text-[22px] font-semibold md:text-2xl  text-gray-800 dark:text-gray-100">
+        Habilidades
+      </h1>
+      <div v-for="(hab, idx) in habilidades" :key="idx"
+        class="group border border-gray-200 dark:border-gray-700 rounded-xl p-3 w-[150px] sm:w-[170px] bg-white/80 dark:bg-gray-900/50 
+        shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-start gap-3 hover:-translate-y-0.5">
+        <NuxtImg :src="hab.src" :alt="hab.label"
+          :class="['transition-transform duration-300 group-hover:scale-105', hab.class]" />
+        <span class="font-medium text-gray-800 dark:text-gray-200 text-sm sm:text-base">
+          {{ hab.label }}
+        </span>
       </div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-
 const habilidades = [
-  { label:'Git' , src: '/git.png', class: 'w-12', },
-  { label:'TailwindCSS' , src: '/tailwindcss.png', class: 'w-12', },
-  { label:'JavaScript' , src: '/javascript.png', class: 'w-12', },
-  { label:'TypeScript' , src: '/typescript.png', class: 'w-12', },
-  { label:'Vue.js' , src: '/vue.png', class: 'w-12', },
-  { label:'Nuxt.js' , src: '/nuxt.png', class: 'w-12', },
-  { label:'MySQL' , src: '/mysql.png', class: 'w-12', },
-  { label:'PostgreSQL' , src: '/postgres.png', class: 'w-12', },
-  ]
+  { label: 'Git', src: '/git.png', class: 'w-8' },
+  { label: 'TailwindCSS', src: '/tailwindcss.png', class: 'w-8' },
+  { label: 'JavaScript', src: '/javascript.png', class: 'w-8' },
+  { label: 'TypeScript', src: '/typescript.png', class: 'w-8' },
+  { label: 'Vue.js', src: '/vue.png', class: 'w-8' },
+  { label: 'Nuxt.js', src: '/nuxt.png', class: 'w-8' },
+  { label: 'MySQL', src: '/mysql.png', class: 'w-8' },
+  { label: 'PostgreSQL', src: '/postgres.png', class: 'w-8' },
+]
 </script>
+<style scoped>
+.text-primary-600 {
+  color: #3b82f6;
+  /* Azul Tailwind */
+}
+</style>
