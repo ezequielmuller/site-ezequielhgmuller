@@ -7,4 +7,6 @@
   </div>
 </template>
 <script setup lang="ts">
+import NavbarLayout from '~/components/layout/NavbarLayout.vue'
 </script>
+
