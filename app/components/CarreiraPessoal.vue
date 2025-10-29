@@ -1,22 +1,55 @@
 <template>
   <!-- formação academica -->
-  <div class="flex justify-center mt-5">
-    <div class="flex flex-col md:flex-row items-center justify-center gap-6 w-full max-w-4xl">
-      <div class="w-full md:w-1/2 max-w-md text-center">
-        <h1 class="text-[22px] font-medium md:text-2xl mb-4">Formação</h1>
+  <div class="flex justify-center items-center">
+    <div class="flex flex-col md:flex-row md:items-start items-center justify-center gap-6 w-full max-w-4xl mt-4">
+      <div class="w-full md:w-1/2 max-w-md flex flex-col items-center">
+        <div class="text-[22px] font-medium md:text-2xl mb-4">Formação</div>
         <UTimeline :default-value="2" :items="timelineFormacao" class="w-full break-words whitespace-normal"
           color="secondary" />
       </div>
-      <div class="w-full md:w-1/2 max-w-md text-center">
+      <div class="w-full md:w-1/2 max-w-md flex flex-col items-center">
         <h1 class="text-[22px] font-medium md:text-2xl mb-4">Experiência</h1>
-        <UCard variant="subtle" class="text-left">
+        <UCard variant="subtle" class="w-full">
           <template #header>
-            Desenvolvedor FullStack Jr
+            <div class="flex items-center gap-2">
+            <UIcon name="clarity:briefcase-line" class="size-5" />
+            <span class="font-medium text-[17px]">Gazzi Sistemas</span>
+            </div>
+            <div class="font-medium">
+              Desenvolvedor FullStack Jr<br />
+              <span class="font-normal">
+                Fev de 2025 - O momento | 9 meses<br />
+                Remoto - Tempo Integral<br />
+                Cascavel, Paraná, Brasil
+              </span>
+            </div>
           </template>
-          Desenvolvimento de Aplicações Web
           <template #footer>
-           <UButton icon="oui:list" color="neutral" variant="outline" :ui="{leadingIcon: 'text-primary'}" 
-           class="text-rigth">Ver detalhes</UButton>
+            <UModal :transition="true" title="Desenvolvedor FullStack Jr" :close="{ class: 'cursor-pointer' }">
+              <div class="flex justify-end">
+                <UButton label="Ver detalhes" color="neutral" variant="subtle"
+                  class="cursor-pointer hover:shadow-md transition-all duration-300  hover:scale-110" />
+              </div>
+              <template #body>
+                <div class="flex text-justify">
+                  - Desenvolvimento de Aplicações Web com Vue.js 3 usando Quasar Framework, Java, PostgreSQL, JSON para
+                  a
+                  comunicação da API no sistema, Design UI/UX, GIT para versionamento de
+                  código e metodologias ágeis para o desenvolvimento.<br />
+                  - Desenvolvemos uma solução para o comércio focado no varejo trazendo mais facilidade e simplicidade
+                  para o logista desde a compra ate a entrega de mercadorias e gestão da loja.<br />
+                  - Me tornei responsável em um desenvolvimento de um sistema de auditorias públicas, controle interno e
+                  de fiscalização, todos eles focados para prefeituras municipais<br />
+                </div>
+                <div class="flex justify-center items-center mt-2 gap-4">
+                  <NuxtImg src="/git.png" alt="Logo do Git" class="w-10" />
+                  <NuxtImg src="/vue.png" alt="Logo do Git" class="w-10" />
+                  <NuxtImg src="/quasar.png" alt="Logo do Git" class="w-10" />
+                  <NuxtImg src="/java.png" alt="Logo do Git" class="w-10" />
+                  <NuxtImg src="/postgres.png" alt="Logo do Git" class="w-10" />
+                </div>
+              </template>
+            </UModal>
           </template>
         </UCard>
       </div>
@@ -38,17 +71,19 @@ const timelineFormacao = ref<TimelineItem[]>([
     date: 'Mar, 2022 - Dez, 2024',
     title: 'Técnico em Informática Integrado ao Ensino Médio',
     description: 'Formado em Técnico em Informática no Ensino Médio pelo Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul - Campus Erechim',
-    icon: 'f7:building-columns-fill',
+    icon: 'heroicons-outline:academic-cap',
   }
 ])
-const timelineExperiencia = ref<TimelineItem[]>([
-  {
-    date: 'Fev, 2025 - O momento',
-    title: '',
-    description: 'Desenvolvimento de Aplicações Web com VueJS 3 usando Quasar Framework, Java, PostgreSQL, IBExpert com Firebird 3.0, JSON para a comunicação da API no sistema, Design UI/UX, GIT para versionamento de código e metodologias ágeis para o desenvolvimento.',
-    icon: 'f7:building-columns-fill',
-  }
-])
+const habilidades = [
+  { label: 'Git', src: '', class: 'w-8' },
+  { label: 'TailwindCSS', src: '/tailwindcss.png', class: 'w-8' },
+  { label: 'JavaScript', src: '/javascript.png', class: 'w-8' },
+  { label: 'TypeScript', src: '/typescript.png', class: 'w-8' },
+  { label: 'Vue.js', src: '/vue.png', class: 'w-8' },
+  { label: 'Nuxt.js', src: '/nuxt.png', class: 'w-8' },
+  { label: 'MySQL', src: '/mysql.png', class: 'w-8' },
+  { label: 'PostgreSQL', src: '/postgres.png', class: 'w-8' },
+]
 </script>
 
 <style scoped>
