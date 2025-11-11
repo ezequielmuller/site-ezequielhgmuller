@@ -24,28 +24,23 @@
       <h1 class="basis-full text-[22px] font-medium md:text-2xl">
         Habilidades
       </h1>
-      <div v-for="(hab, idx) in habilidades" :key="idx"
-        class="group border-2 border-gray-200 dark:border-gray-700  rounded-xl p-3 w-[150px] sm:w-[170px]
-        shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-start gap-3 hover:-translate-y-1.5">
-        <NuxtImg :src="hab.src" :alt="hab.label"
-          :class="['transition-transform duration-300 group-hover:scale-105', hab.class]" />
-        <span class="font-medium text-sm sm:text-base">
-          {{ hab.label }}
-        </span>
-      </div>
+      <UMarquee reverse>
+        <NuxtImg v-for="(hab, idx) in habilidades" :key="idx" :src="hab.src" :alt="hab.label"
+          class="w-10" />
+      </UMarquee>
     </div>
   </div>
 </template>
 <script setup lang="ts">
 const habilidades = [
-  { label: 'Git', src: '/git.png', class: 'w-8' },
-  { label: 'TailwindCSS', src: '/tailwindcss.png', class: 'w-8' },
-  { label: 'JavaScript', src: '/javascript.png', class: 'w-8' },
-  { label: 'TypeScript', src: '/typescript.png', class: 'w-8' },
-  { label: 'Vue.js', src: '/vue.png', class: 'w-8' },
-  { label: 'Nuxt.js', src: '/nuxt.png', class: 'w-8' },
-  { label: 'MySQL', src: '/mysql.png', class: 'w-8' },
-  { label: 'PostgreSQL', src: '/postgres.png', class: 'w-8' },
+  { label: 'Git', src: '/git.png' },
+  { label: 'TailwindCSS', src: '/tailwindcss.png' },
+  { label: 'JavaScript', src: '/javascript.png' },
+  { label: 'TypeScript', src: '/typescript.png' },
+  { label: 'Vue.js', src: '/vue.png' },
+  { label: 'Nuxt.js', src: '/nuxt.png' },
+  { label: 'MySQL', src: '/mysql.png' },
+  { label: 'PostgreSQL', src: '/postgres.png' },
 ]
 </script>
 <style scoped>
