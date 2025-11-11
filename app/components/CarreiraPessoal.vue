@@ -18,7 +18,7 @@
             <div class="font-medium">
               Desenvolvedor FullStack Jr<br />
               <span class="font-normal">
-                Fev de 2025 - O momento | 9 meses<br />
+                Fev de 2025 - O momento | 10 meses<br />
                 Remoto - Tempo Integral<br />
                 Cascavel, Paraná, Brasil
               </span>
@@ -33,12 +33,12 @@
               <template #body>
                 <div class="flex text-justify">
                   - Desenvolvimento de Aplicações Web com Vue.js 3 usando Quasar Framework, Java, PostgreSQL, JSON para
-                  a
-                  comunicação da API no sistema, Design UI/UX, GIT para versionamento de
-                  código e metodologias ágeis para o desenvolvimento.<br />
+                  a comunicação da API no sistema, Design UI/UX, GIT para versionamento de código e metodologias ágeis para o desenvolvimento.<br />
+                  <br />
                   - Desenvolvemos uma solução para o comércio focado no varejo trazendo mais facilidade e simplicidade
                   para o logista desde a compra ate a entrega de mercadorias e gestão da loja.<br />
-                  - Me tornei responsável em um desenvolvimento de um sistema de auditorias públicas, controle interno e
+                  <br />
+                  - Me tornei uns dos principais desenvolvedores de um sistema de auditorias públicas, controle interno e
                   de fiscalização, todos eles focados para prefeituras municipais<br />
                 </div>
                 <div class="flex justify-center items-center mt-2 gap-4">
@@ -74,16 +74,6 @@ const timelineFormacao = ref<TimelineItem[]>([
     icon: 'heroicons-outline:academic-cap',
   }
 ])
-const habilidades = [
-  { label: 'Git', src: '', class: 'w-8' },
-  { label: 'TailwindCSS', src: '/tailwindcss.png', class: 'w-8' },
-  { label: 'JavaScript', src: '/javascript.png', class: 'w-8' },
-  { label: 'TypeScript', src: '/typescript.png', class: 'w-8' },
-  { label: 'Vue.js', src: '/vue.png', class: 'w-8' },
-  { label: 'Nuxt.js', src: '/nuxt.png', class: 'w-8' },
-  { label: 'MySQL', src: '/mysql.png', class: 'w-8' },
-  { label: 'PostgreSQL', src: '/postgres.png', class: 'w-8' },
-]
 </script>
 
 <style scoped>

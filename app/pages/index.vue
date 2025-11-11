@@ -14,6 +14,7 @@
     <USeparator icon="sidekickicons:chevron-left-right-16-solid" class="mt-8 w-full" size="sm" />
     <CarreiraPessoal />
     <USeparator icon="sidekickicons:chevron-left-right-16-solid" class="mt-8 w-full" size="sm" />
+    <ContatoPessoal />
   </div>
 </template>
 <script setup lang="ts">
