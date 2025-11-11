@@ -27,7 +27,7 @@
           <template #footer>
             <UModal :transition="true" title="Desenvolvedor FullStack Jr" :close="{ class: 'cursor-pointer' }">
               <div class="flex justify-end">
-                <UButton label="Ver detalhes" color="neutral" variant="subtle"
+                <UButton label="Ver detalhes" color="secondary" 
                   class="cursor-pointer hover:shadow-md transition-all duration-300  hover:scale-110" />
               </div>
               <template #body>
