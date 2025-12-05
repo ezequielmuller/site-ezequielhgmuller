@@ -73,5 +73,4 @@ const items = computed<NavigationMenuItem[]>(() => [
       <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5 p-4 space-y-2" />
     </template>
   </UHeader>
-
 </template>

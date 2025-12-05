@@ -42,11 +42,11 @@
                   de fiscalização, todos eles focados para prefeituras municipais<br />
                 </div>
                 <div class="flex justify-center items-center mt-2 gap-4">
-                  <NuxtImg src="/git.png" alt="Logo do Git" class="w-10" />
-                  <NuxtImg src="/vue.png" alt="Logo do Git" class="w-10" />
-                  <NuxtImg src="/quasar.png" alt="Logo do Git" class="w-10" />
-                  <NuxtImg src="/java.png" alt="Logo do Git" class="w-10" />
-                  <NuxtImg src="/postgres.png" alt="Logo do Git" class="w-10" />
+                  <NuxtImg src="/stack/git.svg" alt="Logo do Git" class="w-10" />
+                  <NuxtImg src="/stack/vue.svg" alt="Logo do Git" class="w-10" />
+                  <NuxtImg src="/stack/quasar.png" alt="Logo do Git" class="w-10" />
+                  <NuxtImg src="/stack/java.svg" alt="Logo do Git" class="w-10" />
+                  <NuxtImg src="/stack/postgresql.svg" alt="Logo do Git" class="w-10" />
                 </div>
               </template>
             </UModal>
