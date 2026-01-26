@@ -1,5 +1,8 @@
 {
-  "name": "nuxt-app",
+  "name": "site-ezequielhgmuller",
+  "description": "Desenvolvedor Full Stack com foco em TypeScript/JavaScript, venha conhecer um pouco mais sobre mim, projetos e carreira",
+  "productName": "Site Ezequiel Muller",
+  "author": "Ezequiel H. G. Muller <zikimuller017@gmail.com>",
   "type": "module",
   "private": true,
   "scripts": {

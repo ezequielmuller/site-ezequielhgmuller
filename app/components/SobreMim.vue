@@ -7,16 +7,17 @@
         Sobre mim
       </h1>
       <p class="leading-relaxed">
-        Olá! Sou <span class="font-bold text-secondary">Ezequiel Henrique Gazolla Muller</span>, tenho 19 anos e
-        sou natural de Marcelino Ramos/RS.
-        Atuo na área de Tecnologia da Informação e estou em constante evolução, sempre em busca de novos aprendizados e
-        desafios.
+        Olá! Sou <span class="font-bold text-secondary">Ezequiel Henrique Gazolla Muller</span>.
         Tenho foco em <span class="font-bold">desenvolvimento web</span>, <span class="font-bold">engenharia de
           software</span>,
         <span class="font-bold">arquitetura de sistemas</span> e <span class="font-bold">integração entre
           front-end e back-end</span>.
-        Estou sempre atualizado por meio de cursos, projetos próprios e estudos técnicos, buscando criar soluções
-        inovadoras, eficientes e escaláveis.
+        Atualmente estou aprofundando meus conhecimentos em TypeScript e NestJS, com foco em backend moderno, boas
+        práticas de arquitetura, APIs REST e desenvolvimento de soluções escaláveis.
+        Sou estudante de Ciência da Computação e estou sempre em busca de evolução técnica por meio de cursos,
+        projetos próprios e estudo contínuo. Tenho interesse em colaborar com equipes, aprender novas tecnologias e
+        contribuir para o desenvolvimento de produtos eficientes e bem estruturados.
+
       </p>
     </div>
     <!-- habilidades -->
@@ -25,8 +26,7 @@
         Habilidades
       </h1>
       <UMarquee reverse>
-        <NuxtImg v-for="(hab, idx) in habilidades" :key="idx" :src="hab.src" :alt="hab.label"
-          class="w-10" />
+        <NuxtImg v-for="(hab, idx) in habilidades" :key="idx" :src="hab.src" :alt="hab.label" class="w-10" />
       </UMarquee>
     </div>
   </div>
@@ -40,8 +40,6 @@ const habilidades = [
   { label: 'Nest.js', src: '/stack/nest.svg' },
   { label: 'PostgreSQL', src: '/stack/postgresql.svg' },
   { label: 'MySQL', src: '/stack/mysql.png' },
-  { label: 'Next.js', src: '/stack/next.svg' },
-  { label: 'React.js', src: '/stack/react.svg' },
   { label: 'Nuxt.js', src: '/stack/nuxt.svg' },
   { label: 'Vue.js', src: '/stack/vue.svg' }
 ]

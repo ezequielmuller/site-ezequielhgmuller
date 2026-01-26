@@ -16,10 +16,10 @@
             <span class="font-medium text-[17px]">Gazzi Sistemas</span>
             </div>
             <div class="font-medium">
-              Desenvolvedor FullStack Jr<br />
+              Desenvolvedor FullStack Jr<br >
               <span class="font-normal">
-                Fev de 2025 - O momento | 10 meses<br />
-                Remoto - Tempo Integral<br />
+                Fev de 2025 - O momento | 10 meses<br >
+                Remoto - Tempo Integral<br >
                 Cascavel, Paraná, Brasil
               </span>
             </div>
@@ -32,14 +32,15 @@
               </div>
               <template #body>
                 <div class="flex text-justify">
-                  - Desenvolvimento de Aplicações Web com Vue.js 3 usando Quasar Framework, Java, PostgreSQL, JSON para
-                  a comunicação da API no sistema, Design UI/UX, GIT para versionamento de código e metodologias ágeis para o desenvolvimento.<br />
-                  <br />
+                  - Atuando profissionalmente com Vue.js (Quasar Framework) no front-end e Java (JDBC, Servlets e DAO) com API REST e PostgreSQL no back-end. 
+                  Trabalho na implementação e manutenção de funcionalidades, integração entre front-end e back-end, criação de consultas SQL e desenvolvimento 
+                  de APIs seguindo padrões arquiteturais existentes..<br >
+                  <br >
                   - Desenvolvemos uma solução para o comércio focado no varejo trazendo mais facilidade e simplicidade
-                  para o logista desde a compra ate a entrega de mercadorias e gestão da loja.<br />
-                  <br />
+                  para o logista desde a compra ate a entrega de mercadorias e gestão da loja.<br >
+                  <br >
                   - Me tornei uns dos principais desenvolvedores de um sistema de auditorias públicas, controle interno e
-                  de fiscalização, todos eles focados para prefeituras municipais<br />
+                  de fiscalização, todos eles focados para prefeituras municipais<br >
                 </div>
                 <div class="flex justify-center items-center mt-2 gap-4">
                   <NuxtImg src="/stack/git.svg" alt="Logo do Git" class="w-10" />
