@@ -1,24 +1,36 @@
 <script setup lang="ts">
+  import { ref, computed, onMounted } from 'vue'
   import { useRoute } from 'vue-router'
-  import { ref, computed, watch, onMounted } from 'vue'
   import type { NavigationMenuItem } from '@nuxt/ui'
-  import { useColorMode } from '@nuxt/ui/runtime/inertia/stubs.js'
 
-  const colorMode = useColorMode()
+  // Usaremos uma ref manual para controlar o logo
   const logoSrc = ref('')
 
-  // Atualiza logo quando tema muda ---
+  // Simula um "useColorMode" manual
+  const colorMode = ref<'light' | 'dark'>('light')
+
+  // Atualiza logo
   const updateLogo = () => {
     logoSrc.value =
       colorMode.value === 'dark'
         ? '/logo-branco-s_fundo.png'
         : '/logo-s_fundo.png'
   }
-  watch(() => colorMode.value, updateLogo)
+
+  // Exemplo: escuta preferencia do usuário com matchMedia
   onMounted(() => {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)')
+    colorMode.value = prefersDark.matches ? 'dark' : 'light'
+
+    prefersDark.addEventListener('change', (e) => {
+      colorMode.value = e.matches ? 'dark' : 'light'
+      updateLogo()
+    })
+
     updateLogo()
   })
-  // Rotas do menu ---
+
+  // Rotas do menu
   const route = useRoute()
   const items = computed<NavigationMenuItem[]>(() => [
     {
@@ -49,6 +61,7 @@
     },
   ])
 </script>
+
 <template>
   <UHeader
     mode="slideover"
