@@ -1,34 +1,7 @@
 <script setup lang="ts">
-  import { ref, computed, onMounted } from 'vue'
+  import { computed } from 'vue'
   import { useRoute } from 'vue-router'
   import type { NavigationMenuItem } from '@nuxt/ui'
-
-  // Usaremos uma ref manual para controlar o logo
-  const logoSrc = ref('')
-
-  // Simula um "useColorMode" manual
-  const colorMode = ref<'light' | 'dark'>('light')
-
-  // Atualiza logo
-  const updateLogo = () => {
-    logoSrc.value =
-      colorMode.value === 'dark'
-        ? '/logo-branco-s_fundo.png'
-        : '/logo-s_fundo.png'
-  }
-
-  // Exemplo: escuta preferencia do usuário com matchMedia
-  onMounted(() => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)')
-    colorMode.value = prefersDark.matches ? 'dark' : 'light'
-
-    prefersDark.addEventListener('change', (e) => {
-      colorMode.value = e.matches ? 'dark' : 'light'
-      updateLogo()
-    })
-
-    updateLogo()
-  })
 
   // Rotas do menu
   const route = useRoute()
@@ -68,7 +41,12 @@
     class="border-b border-gray-200 dark:border-gray-800"
   >
     <template #title>
-      <NuxtImg :src="logoSrc" alt="Logo Ezequiel Muller" class="h-20" />
+      <UColorModeImage
+        light="/logo-s_fundo.png"
+        dark="/logo-branco-s_fundo.png"
+        alt="Logo Ezequiel Muller"
+        class="h-20"
+      />
     </template>
     <UNavigationMenu :items="items" />
     <template #right>
