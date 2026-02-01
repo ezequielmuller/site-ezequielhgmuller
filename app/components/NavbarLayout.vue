@@ -11,26 +11,30 @@
       to: '/docs/getting-started',
       icon: 'gala:portrait2',
       active: route.path.startsWith('/docs/getting-started'),
-      class: 'mb-1 cursor-pointer',
+      class:
+        'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
     },
     {
       label: 'Carreira',
       to: '/docs/components',
       icon: 'clarity:briefcase-line',
       active: route.path.startsWith('/docs/components'),
-      class: 'mb-1 cursor-pointer',
+      class:
+        'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
     },
     {
       label: 'Projetos',
       icon: 'codicon:file-submodule',
       to: 'https://go.nuxt.com/figma-ui',
-      class: 'mb-1 cursor-pointer',
+      class:
+        'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
     },
     {
       label: 'Contato',
       icon: 'fluent-emoji-high-contrast:envelope',
       to: 'https://github.com/nuxt/ui/releases',
-      class: 'mb-1 cursor-pointer',
+      class:
+        'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
     },
   ])
 </script>
@@ -50,7 +54,10 @@
     </template>
     <UNavigationMenu :items="items" />
     <template #right>
-      <UTooltip text="GitHub">
+      <UTooltip
+        text="GitHub"
+        class="transition-all duration-300 hover:-translate-y-1"
+      >
         <UButton
           color="neutral"
           variant="ghost"
@@ -60,7 +67,10 @@
           aria-label="GitHub"
         />
       </UTooltip>
-      <UTooltip text="LinkedIn">
+      <UTooltip
+        text="LinkedIn"
+        class="transition-all duration-300 hover:-translate-y-1"
+      >
         <UButton
           color="neutral"
           variant="ghost"
@@ -70,7 +80,10 @@
           aria-label="GitHub"
         />
       </UTooltip>
-      <UTooltip text="Instagram">
+      <UTooltip
+        text="Instagram"
+        class="transition-all duration-300 hover:-translate-y-1"
+      >
         <UButton
           color="neutral"
           variant="ghost"
@@ -81,7 +94,9 @@
         />
       </UTooltip>
       <USeparator orientation="vertical" class="h-8" />
-      <UColorModeButton class="cursor-pointer" />
+      <UColorModeButton
+        class="cursor-pointer transition-all duration-300 hover:-translate-y-1"
+      />
     </template>
     <template #body>
       <UNavigationMenu
