@@ -15,7 +15,7 @@
       </div>
       <div class="w-full md:w-1/2 max-w-md flex flex-col items-center">
         <h1 class="text-[22px] font-medium md:text-2xl mb-4">Experiência</h1>
-        <UCard variant="subtle" class="w-full">
+        <UCard variant="subtle" class="w-full rounded-2xl">
           <template #header>
             <div class="flex items-center gap-2">
               <UIcon name="clarity:briefcase-line" class="size-5" />
@@ -38,9 +38,9 @@
             >
               <div class="flex justify-end">
                 <UButton
+                  trailing-icon="mono-icons:expand"
                   label="Ver detalhes"
-                  color="secondary"
-                  class="cursor-pointer hover:shadow-md transition-all duration-300 hover:scale-110 text-white"
+                  class="cursor-pointer text-white bg-blue-600 hover:bg-secondary transition-all duration-300 hover:-translate-y-1"
                 />
               </div>
               <template #body>
