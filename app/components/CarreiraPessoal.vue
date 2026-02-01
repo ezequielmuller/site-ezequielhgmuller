@@ -24,7 +24,7 @@
             <div class="font-medium">
               Desenvolvedor FullStack Jr<br />
               <span class="font-normal">
-                Fev de 2025 - O momento | 10 meses<br />
+                Fev de 2025 - O momento | {{ calcularPeriodo(1) }}<br />
                 Remoto - Tempo Integral<br />
                 Cascavel, Paraná, Brasil
               </span>
@@ -67,23 +67,28 @@
                     class="w-10"
                   />
                   <NuxtImg
+                    src="/stack/javascript.svg"
+                    alt="Logo do Vue"
+                    class="w-10"
+                  />
+                  <NuxtImg
                     src="/stack/vue.svg"
-                    alt="Logo do Git"
+                    alt="Logo do Vue"
                     class="w-10"
                   />
                   <NuxtImg
                     src="/stack/quasar.png"
-                    alt="Logo do Git"
+                    alt="Logo do Quasar"
                     class="w-10"
                   />
                   <NuxtImg
                     src="/stack/java.svg"
-                    alt="Logo do Git"
+                    alt="Logo do Java"
                     class="w-10"
                   />
                   <NuxtImg
                     src="/stack/postgresql.svg"
-                    alt="Logo do Git"
+                    alt="Logo do PostgreSQL"
                     class="w-10"
                   />
                 </div>
@@ -115,6 +120,31 @@ const timelineFormacao = ref<TimelineItem[]>([
     icon: 'heroicons-outline:academic-cap',
   },
 ])
+
+const calcularPeriodo = (mes: number): string => {
+  const dataInicio = new Date(2025, mes)
+  const dataAtual = new Date()
+
+  let anos = dataAtual.getFullYear() - dataInicio.getFullYear()
+  let meses = dataAtual.getMonth() - dataInicio.getMonth()
+
+  if (meses < 0) {
+    anos--
+    meses += 12
+  }
+
+  let periodo = ''
+  if (anos > 0) {
+    periodo += `${anos} ano${anos > 1 ? 's' : ''}`
+  }
+
+  if (meses > 0) {
+    if (anos > 0) periodo += ' e '
+    periodo += `${meses} mês${meses > 1 ? 'es' : ''}`
+  }
+
+  return periodo || 'menos de um mês'
+}
 </script>
 
 <style scoped>
