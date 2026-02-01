@@ -26,6 +26,7 @@
   "devDependencies": {
     "@nuxt/types": "^2.18.1",
     "@nuxt/typescript-build": "^3.0.2",
+    "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.8.1",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.1.1"
