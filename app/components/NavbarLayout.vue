@@ -1,44 +1,3 @@
-<script setup lang="ts">
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
-import type { NavigationMenuItem } from '@nuxt/ui'
-
-// Rotas do menu
-const route = useRoute()
-const items = computed<NavigationMenuItem[]>(() => [
-  {
-    label: 'Sobre Mim',
-    to: '#sobre',
-    icon: 'gala:portrait2',
-    active: route.path.startsWith('/docs/getting-started'),
-    class:
-      'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
-  },
-  {
-    label: 'Carreira',
-    to: '#carreira',
-    icon: 'clarity:briefcase-line',
-    active: route.path.startsWith('/docs/components'),
-    class:
-      'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
-  },
-  {
-    label: 'Projetos',
-    icon: 'codicon:file-submodule',
-    to: '#projetos',
-    class:
-      'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
-  },
-  {
-    label: 'Contato',
-    icon: 'fluent-emoji-high-contrast:envelope',
-    to: '#contato',
-    class:
-      'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
-  },
-])
-</script>
-
 <template>
   <UHeader
     mode="slideover"
@@ -54,10 +13,7 @@ const items = computed<NavigationMenuItem[]>(() => [
     </template>
     <UNavigationMenu :items="items" />
     <template #right>
-      <UTooltip
-        text="GitHub"
-        class="transition-all duration-300 hover:-translate-y-1"
-      >
+      <UTooltip text="GitHub">
         <UButton
           color="neutral"
           variant="ghost"
@@ -67,36 +23,28 @@ const items = computed<NavigationMenuItem[]>(() => [
           aria-label="GitHub"
         />
       </UTooltip>
-      <UTooltip
-        text="LinkedIn"
-        class="transition-all duration-300 hover:-translate-y-1"
-      >
+      <UTooltip text="LinkedIn">
         <UButton
           color="neutral"
           variant="ghost"
           to="https://www.linkedin.com/in/ezequielhgmuller/"
           target="_blank"
           icon="entypo-social:linkedin"
-          aria-label="GitHub"
+          aria-label="LinkedIn"
         />
       </UTooltip>
-      <UTooltip
-        text="Instagram"
-        class="transition-all duration-300 hover:-translate-y-1"
-      >
+      <UTooltip text="Instagram">
         <UButton
           color="neutral"
           variant="ghost"
           to="https://www.instagram.com/ezequielmuller__/"
           target="_blank"
           icon="entypo-social:instagram"
-          aria-label="GitHub"
+          aria-label="Instagram"
         />
       </UTooltip>
       <USeparator orientation="vertical" class="h-8" />
-      <UColorModeButton
-        class="cursor-pointer transition-all duration-300 hover:-translate-y-1"
-      />
+      <UColorModeButton class="cursor-pointer" />
     </template>
     <template #body>
       <UNavigationMenu
@@ -107,3 +55,40 @@ const items = computed<NavigationMenuItem[]>(() => [
     </template>
   </UHeader>
 </template>
+
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import type { NavigationMenuItem } from '@nuxt/ui'
+
+// Rotas do menu
+const route = useRoute()
+const items = computed<NavigationMenuItem[]>(() => [
+  {
+    label: 'Sobre Mim',
+    to: '#sobre',
+    icon: 'gala:portrait2',
+    active: route.path.startsWith('/docs/getting-started'),
+    class: 'mb-1 cursor-pointer ',
+  },
+  {
+    label: 'Carreira',
+    to: '#carreira',
+    icon: 'clarity:briefcase-line',
+    active: route.path.startsWith('/docs/components'),
+    class: 'mb-1 cursor-pointer',
+  },
+  {
+    label: 'Projetos',
+    icon: 'codicon:file-submodule',
+    to: '#projetos',
+    class: 'mb-1 cursor-pointer',
+  },
+  {
+    label: 'Contato',
+    icon: 'fluent-emoji-high-contrast:envelope',
+    to: '#contato',
+    class: 'mb-1 cursor-pointer',
+  },
+])
+</script>
