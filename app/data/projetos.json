@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "titulo": "E-commerce NegoMaq",
+    "descricaoCurta": "Sistema de vendas de artigos de churrasco e facas.",
+    "descricaoCompleta": "A plataforma foi criada para a venda de facas, estojos, aventais de couro e artigos para churrasco, e atualmente está 100% desenvolvida, integrada e pronta para entrar em operação.",
+    "imagemPrincipal": "/projetos/app_negomaq/negomaq.png",
+    "github": "https://github.com/ezequielhgmuller/negomaq",
+    "linkedin": "https://www.linkedin.com/in/ezequielhgmuller/details/projects/",
+    "imagens": [
+      "/projetos/app_negomaq/tela_login.jpg",
+      "/projetos/app_negomaq/tela_home.jpg",
+      "/projetos/app_negomaq/tela_carrinho.jpg",
+      "/projetos/app_negomaq/tela_usuario.jpg"
+    ],
+    "stack": [
+      { "nome": "Git", "icon": "/stack/git.svg" },
+      { "nome": "TypeScript", "icon": "/stack/typescript.svg" },
+      { "nome": "Vue", "icon": "/stack/vue.svg" },
+      { "nome": "Quasar", "icon": "/stack/quasar.png" }
+    ]
+  }
+]

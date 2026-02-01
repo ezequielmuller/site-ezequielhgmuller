@@ -1,0 +1,95 @@
+<template>
+  <UCard variant="subtle" class="w-full rounded-2xl">
+    <template #header>
+      <div class="flex items-center justify-center gap-2">
+        <UIcon name="proicons:layers" class="size-5" />
+        <span class="font-medium text-[17px]">
+          {{ projeto.titulo }}
+        </span>
+      </div>
+
+      <div class="my-2 text-center">
+        {{ projeto.descricaoCurta }}
+      </div>
+
+      <div class="flex justify-center">
+        <NuxtImg
+          :src="projeto.imagemPrincipal"
+          :alt="projeto.titulo"
+          class="w-full max-w-[220px] h-[140px] object-cover border-2 border-red-600 rounded-xl"
+        />
+      </div>
+    </template>
+
+    <!-- Modal -->
+    <template #footer>
+      <UModal :title="projeto.titulo">
+        <div class="flex justify-end">
+          <UButton
+            label="Ver detalhes"
+            trailing-icon="mono-icons:expand"
+            class="bg-red-600 hover:bg-red-400 text-white"
+          />
+        </div>
+
+        <template #body>
+          <p class="text-justify mb-4">
+            {{ projeto.descricaoCompleta }}
+          </p>
+
+          <p class="mb-1">
+            Github:
+            <a
+              :href="projeto.github"
+              target="_blank"
+              class="underline text-secondary-600 break-all"
+            >
+              {{ projeto.github }}
+            </a>
+          </p>
+
+          <p class="mb-6">
+            LinkedIn:
+            <a
+              :href="projeto.linkedin"
+              target="_blank"
+              class="underline text-secondary-600 break-all"
+            >
+              {{ projeto.linkedin }}
+            </a>
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <NuxtImg
+              v-for="(img, index) in projeto.imagens"
+              :key="index"
+              :src="img"
+              :alt="projeto.titulo"
+              class="aspect-[4/3] object-contain border-2 border-red-600 rounded-xl"
+            />
+          </div>
+
+          <USeparator />
+
+          <div class="flex justify-center gap-4 mt-4">
+            <NuxtImg
+              v-for="tech in projeto.stack"
+              :key="tech.nome"
+              :src="tech.icon"
+              :alt="tech.nome"
+              class="w-10"
+            />
+          </div>
+        </template>
+      </UModal>
+    </template>
+  </UCard>
+</template>
+
+<script setup lang="ts">
+import type { Projeto } from '~/types/Projeto.ts'
+
+defineProps<{
+  projeto: Projeto
+}>()
+</script>
