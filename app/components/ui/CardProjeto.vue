@@ -28,7 +28,7 @@
           <UButton
             label="Ver detalhes"
             trailing-icon="mono-icons:expand"
-            class="bg-red-600 hover:bg-red-400 text-white"
+            class="bg-red-600 hover:bg-red-400 text-white transition-all duration-300 hover:-translate-y-1 cursor-pointer"
           />
         </div>
 
@@ -59,6 +59,18 @@
             </a>
           </p>
 
+          <USeparator />
+
+          <div class="flex justify-center gap-4 my-4">
+            <NuxtImg
+              v-for="tech in projeto.stack"
+              :key="tech.nome"
+              :src="tech.icon"
+              :alt="tech.nome"
+              class="w-10"
+            />
+          </div>
+
           <div class="grid grid-cols-2 gap-4 mb-8">
             <NuxtImg
               v-for="(img, index) in projeto.imagens"
@@ -66,18 +78,6 @@
               :src="img"
               :alt="projeto.titulo"
               class="aspect-[4/3] object-contain border-2 border-red-600 rounded-xl"
-            />
-          </div>
-
-          <USeparator />
-
-          <div class="flex justify-center gap-4 mt-4">
-            <NuxtImg
-              v-for="tech in projeto.stack"
-              :key="tech.nome"
-              :src="tech.icon"
-              :alt="tech.nome"
-              class="w-10"
             />
           </div>
         </template>
