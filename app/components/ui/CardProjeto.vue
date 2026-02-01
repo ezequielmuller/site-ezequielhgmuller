@@ -23,7 +23,7 @@
 
     <!-- Modal -->
     <template #footer>
-      <UModal :title="projeto.titulo">
+      <UModal :title="projeto.titulo" :close="{ class: 'cursor-pointer' }">
         <div class="flex justify-end">
           <UButton
             label="Ver detalhes"
