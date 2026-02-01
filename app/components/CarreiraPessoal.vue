@@ -38,7 +38,7 @@
             >
               <div class="flex justify-end">
                 <UButton
-                  trailing-icon="mono-icons:expand"
+                  icon="mono-icons:expand"
                   label="Ver detalhes"
                   class="cursor-pointer text-white bg-blue-600 hover:bg-secondary transition-all duration-300 hover:-translate-y-1"
                 />
@@ -96,33 +96,33 @@
   </div>
 </template>
 <script setup lang="ts">
-  import type { TimelineItem } from '@nuxt/ui'
-  import { ref } from 'vue'
+import type { TimelineItem } from '@nuxt/ui'
+import { ref } from 'vue'
 
-  const timelineFormacao = ref<TimelineItem[]>([
-    {
-      date: 'Fev, 2025 - O momento',
-      title: 'Bacharelado em Ciência da Computação',
-      description:
-        'Bacharel em Ciência da Computação pela Universidade Regional Integrada do Alto Uruguai e das Missões - Campus Erechim.',
-      icon: 'f7:building-columns-fill',
-    },
-    {
-      date: 'Mar, 2022 - Dez, 2024',
-      title: 'Técnico em Informática Integrado ao Ensino Médio',
-      description:
-        'Formado em Técnico em Informática no Ensino Médio pelo Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul - Campus Erechim',
-      icon: 'heroicons-outline:academic-cap',
-    },
-  ])
+const timelineFormacao = ref<TimelineItem[]>([
+  {
+    date: 'Fev, 2025 - O momento',
+    title: 'Bacharelado em Ciência da Computação',
+    description:
+      'Bacharel em Ciência da Computação pela Universidade Regional Integrada do Alto Uruguai e das Missões - Campus Erechim.',
+    icon: 'f7:building-columns-fill',
+  },
+  {
+    date: 'Mar, 2022 - Dez, 2024',
+    title: 'Técnico em Informática Integrado ao Ensino Médio',
+    description:
+      'Formado em Técnico em Informática no Ensino Médio pelo Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul - Campus Erechim',
+    icon: 'heroicons-outline:academic-cap',
+  },
+])
 </script>
 
 <style scoped>
-  /* força quebra de texto dentro do componente da biblioteca (ajusta seletor se necessário) */
-  ::v-deep .u-timeline,
-  ::v-deep .u-timeline * {
-    white-space: normal !important;
-    overflow-wrap: anywhere !important;
-    word-break: break-word !important;
-  }
+/* força quebra de texto dentro do componente da biblioteca (ajusta seletor se necessário) */
+::v-deep .u-timeline,
+::v-deep .u-timeline * {
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+}
 </style>

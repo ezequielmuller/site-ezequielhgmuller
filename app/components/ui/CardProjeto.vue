@@ -27,7 +27,7 @@
         <div class="flex justify-end">
           <UButton
             label="Ver detalhes"
-            trailing-icon="mono-icons:expand"
+            icon="mono-icons:expand"
             class="bg-red-600 hover:bg-red-400 text-white transition-all duration-300 hover:-translate-y-1 cursor-pointer"
           />
         </div>
