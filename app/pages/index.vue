@@ -8,7 +8,7 @@
           Ezequiel H. G. Muller
         </h1>
         <p class="mt-2 text-lg md:text-2xl text-gray-600">
-          Desenvolvedor Full Stack
+          Desenvolvedor FullStack
         </p>
       </div>
       <NuxtImg
