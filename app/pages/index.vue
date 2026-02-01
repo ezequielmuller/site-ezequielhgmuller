@@ -45,11 +45,11 @@
   </div>
 </template>
 <script setup lang="ts">
-  import { useSeoMeta } from 'nuxt/app'
+import { useSeoMeta } from 'nuxt/app'
 
-  useSeoMeta({
-    title: 'Ezequiel Muller | Full Stack Developer',
-    description:
-      'Desenvolvedor Full Stack com foco em TypeScript/JavaScript, venha conhecer um pouco mais sobre mim, projetos e carreira',
-  })
+useSeoMeta({
+  title: 'Site - Ezequiel H. G. Muller | FullStack Developer',
+  description:
+    'Desenvolvedor FullStack com foco em TypeScript/JavaScript, venha conhecer um pouco mais sobre mim, projetos e carreira',
+})
 </script>
