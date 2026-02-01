@@ -23,25 +23,39 @@
       class="mt-8 w-full"
       size="sm"
     />
-    <SobreMim />
+    <section id="sobre">
+      <SobreMim />
+    </section>
+
     <USeparator
       icon="sidekickicons:chevron-left-right-16-solid"
       class="mt-8 w-full"
       size="sm"
     />
-    <CarreiraPessoal />
+
+    <section id="carreira">
+      <CarreiraPessoal />
+    </section>
+
     <USeparator
       icon="sidekickicons:chevron-left-right-16-solid"
       class="mt-8 w-full"
       size="sm"
     />
-    <ProjetosPessoal />
+
+    <section id="projetos">
+      <ProjetosPessoal />
+    </section>
+
     <USeparator
       icon="sidekickicons:chevron-left-right-16-solid"
       class="mt-8 w-full"
       size="sm"
     />
-    <ContatoPessoal />
+
+    <section id="contato">
+      <ContatoPessoal />
+    </section>
   </div>
 </template>
 <script setup lang="ts">

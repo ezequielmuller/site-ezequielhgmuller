@@ -1,42 +1,42 @@
 <script setup lang="ts">
-  import { computed } from 'vue'
-  import { useRoute } from 'vue-router'
-  import type { NavigationMenuItem } from '@nuxt/ui'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
-  // Rotas do menu
-  const route = useRoute()
-  const items = computed<NavigationMenuItem[]>(() => [
-    {
-      label: 'Sobre Mim',
-      to: '/docs/getting-started',
-      icon: 'gala:portrait2',
-      active: route.path.startsWith('/docs/getting-started'),
-      class:
-        'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
-    },
-    {
-      label: 'Carreira',
-      to: '/docs/components',
-      icon: 'clarity:briefcase-line',
-      active: route.path.startsWith('/docs/components'),
-      class:
-        'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
-    },
-    {
-      label: 'Projetos',
-      icon: 'codicon:file-submodule',
-      to: 'https://go.nuxt.com/figma-ui',
-      class:
-        'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
-    },
-    {
-      label: 'Contato',
-      icon: 'fluent-emoji-high-contrast:envelope',
-      to: 'https://github.com/nuxt/ui/releases',
-      class:
-        'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
-    },
-  ])
+// Rotas do menu
+const route = useRoute()
+const items = computed<NavigationMenuItem[]>(() => [
+  {
+    label: 'Sobre Mim',
+    to: '#sobre',
+    icon: 'gala:portrait2',
+    active: route.path.startsWith('/docs/getting-started'),
+    class:
+      'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
+  },
+  {
+    label: 'Carreira',
+    to: '#carreira',
+    icon: 'clarity:briefcase-line',
+    active: route.path.startsWith('/docs/components'),
+    class:
+      'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
+  },
+  {
+    label: 'Projetos',
+    icon: 'codicon:file-submodule',
+    to: '#projetos',
+    class:
+      'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
+  },
+  {
+    label: 'Contato',
+    icon: 'fluent-emoji-high-contrast:envelope',
+    to: '#contato',
+    class:
+      'mb-1 cursor-pointer transition-all duration-300 hover:-translate-y-1',
+  },
+])
 </script>
 
 <template>

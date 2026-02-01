@@ -1,2 +1,8 @@
-@import "tailwindcss";
-@import "@nuxt/ui";
+@import 'tailwindcss';
+@import '@nuxt/ui';
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 96px;
+}
