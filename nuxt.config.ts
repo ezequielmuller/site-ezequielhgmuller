@@ -5,9 +5,7 @@ export default defineNuxtConfig({
   components: true,
 
   compatibilityDate: '2025-07-15',
-  image: {
-    provider: 'ipx',
-  },
+
   app: {
     baseURL: '/',
     head: {
@@ -66,5 +64,10 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'light',
     fallback: 'light',
+  },
+
+  image: {
+    provider: 'ipx',
+    domains: ['https://site-ezequielhgmuller.vercel.app/'],
   },
 })
