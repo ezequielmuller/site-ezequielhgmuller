@@ -1,0 +1,19 @@
+{
+  "buildCommand": "nuxt build",
+  "outputDirectory": ".output",
+  "installCommand": "npm install",
+  "env": {
+    "NITRO_PRERENDER": "true"
+  },
+  "headers": [
+    {
+      "source": "/public/(.*)",
+      "headers": [
+        {
+          "key": "cache-control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ]
+}
