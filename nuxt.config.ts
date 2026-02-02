@@ -38,10 +38,20 @@ export default defineNuxtConfig({
   },
 
   devtools: { enabled: false },
-  ssr: false,
+  ssr: true,
 
   nitro: {
     preset: 'vercel',
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+    },
+    publicAssets: [
+      {
+        baseURL: '/',
+        dir: './public',
+      },
+    ],
   },
 
   vite: {
