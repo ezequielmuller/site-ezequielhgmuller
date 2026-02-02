@@ -16,6 +16,7 @@
         target="_blank"
         icon="i-simple-icons-github"
         aria-label="GitHub"
+        class="hover:text-green-500"
       />
       <UButton
         color="neutral"
@@ -23,7 +24,8 @@
         to="https://www.linkedin.com/in/ezequielhgmuller/"
         target="_blank"
         icon="entypo-social:linkedin"
-        aria-label="GitHub"
+        aria-label="LinkedIn"
+        class="hover:text-blue-500"
       />
       <UButton
         color="neutral"
@@ -31,7 +33,8 @@
         to="https://www.instagram.com/ezequielmuller__/"
         target="_blank"
         icon="entypo-social:instagram"
-        aria-label="GitHub"
+        aria-label="Instagram"
+        class="hover:text-pink-500"
       />
     </template>
   </UFooter>
