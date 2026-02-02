@@ -7,6 +7,9 @@ export interface Projeto {
   github: string
   linkedin: string
   imagens: string[]
+  classImg: string
+  classBotao: string
+  classImgPrincipal: string
   stack: {
     nome: string
     icon: string

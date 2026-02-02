@@ -2,7 +2,7 @@
   {
     "id": 1,
     "titulo": "E-commerce NegoMaq",
-    "descricaoCurta": "Sistema de vendas de artigos de churrasco e facas.",
+    "descricaoCurta": "E-commerce de vendas de facas, artigos de churrasco e aventais.",
     "descricaoCompleta": "A plataforma foi criada para a venda de facas, estojos, aventais de couro e artigos para churrasco, e atualmente está 100% desenvolvida, integrada e pronta para entrar em operação.",
     "imagemPrincipal": "/projetos/app_negomaq/negomaq.png",
     "github": "https://github.com/ezequielhgmuller/negomaq",
@@ -13,11 +13,40 @@
       "/projetos/app_negomaq/tela_carrinho.jpg",
       "/projetos/app_negomaq/tela_usuario.jpg"
     ],
+    "classImg": "aspect-[4/3] object-contain border-2 border-red-600 rounded-xl",
+    "classBotao": "bg-red-600 hover:bg-red-400 text-white transition-all duration-300 hover:-translate-y-1 cursor-pointer",
+    "classImgPrincipal": "w-full max-w-[220px] h-[140px] object-cover border-2 border-red-600 rounded-xl",
     "stack": [
       { "nome": "Git", "icon": "/stack/git.svg" },
       { "nome": "TypeScript", "icon": "/stack/typescript.svg" },
       { "nome": "Vue", "icon": "/stack/vue.svg" },
-      { "nome": "Quasar", "icon": "/stack/quasar.png" }
+      { "nome": "Quasar", "icon": "/stack/quasar.png" },
+      { "nome": "Pinia", "icon": "/stack/pinia.svg" }
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Site Pessoal: Ezequiel H. G. Muller",
+    "descricaoCurta": "Site pessoal, onde você encontrará informações sobre mim, venha me conhecer.",
+    "descricaoCompleta": "Nesse site eu apresento minha trajetória profissional como Desenvolvedor FullStack, reunindo informações sobre minha carreira, experiências, habilidades  técnicas, formação acadêmica e projetos desenvolvidos. O objetivo é compartilhar meu trabalho, destacar minhas competências e facilitar o contato para oportunidades profissionais e colaborações.",
+    "imagemPrincipal": "/projetos/site_pessoal/logo.png",
+    "github": "https://github.com/ezequielmuller/site-ezequielhgmuller",
+    "linkedin": "https://www.linkedin.com/in/ezequielhgmuller/details/projects/",
+    "imagens": [
+      "/projetos/site_pessoal/sessao_sobre.png",
+      "/projetos/site_pessoal/sessao_projeto.png",
+      "/projetos/site_pessoal/site_escuro.png",
+      "/projetos/site_pessoal/logo.png"
+    ],
+    "classImg": "aspect-[4/3] object-contain border-2 border-blue-600 rounded-xl",
+    "classBotao": "bg-blue-600 hover:bg-secondary text-white transition-all duration-300 hover:-translate-y-1 cursor-pointer",
+    "classImgPrincipal": "w-full max-w-[220px] h-[140px] object-cover border-2 border-blue-600 rounded-xl",
+    "stack": [
+      { "nome": "Git", "icon": "/stack/git.svg" },
+      { "nome": "TypeScript", "icon": "/stack/typescript.svg" },
+      { "nome": "Vue", "icon": "/stack/vue.svg" },
+      { "nome": "Nuxt", "icon": "/stack/nuxt.svg" },
+      { "nome": "TailwindCSS", "icon": "/stack/tailwindcss.svg" }
     ]
   }
 ]

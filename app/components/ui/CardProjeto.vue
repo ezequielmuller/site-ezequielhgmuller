@@ -16,7 +16,7 @@
         <NuxtImg
           :src="projeto.imagemPrincipal"
           :alt="projeto.titulo"
-          class="w-full max-w-[220px] h-[140px] object-cover border-2 border-red-600 rounded-xl"
+          :class="projeto.classImgPrincipal"
         />
       </div>
     </template>
@@ -28,7 +28,7 @@
           <UButton
             label="Ver detalhes"
             icon="mono-icons:expand"
-            class="bg-red-600 hover:bg-red-400 text-white transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+            :class="projeto.classBotao"
           />
         </div>
 
@@ -77,7 +77,7 @@
               :key="index"
               :src="img"
               :alt="projeto.titulo"
-              class="aspect-[4/3] object-contain border-2 border-red-600 rounded-xl"
+              :class="projeto.classImg"
             />
           </div>
         </template>
