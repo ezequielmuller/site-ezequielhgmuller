@@ -21,6 +21,7 @@
           target="_blank"
           icon="i-simple-icons-github"
           aria-label="GitHub"
+          class="hover:text-green-600"
         />
       </UTooltip>
       <UTooltip text="LinkedIn">
@@ -31,6 +32,7 @@
           target="_blank"
           icon="entypo-social:linkedin"
           aria-label="LinkedIn"
+          class="hover:text-blue-600"
         />
       </UTooltip>
       <UTooltip text="Instagram">
@@ -41,6 +43,7 @@
           target="_blank"
           icon="entypo-social:instagram"
           aria-label="Instagram"
+          class="hover:text-pink-500"
         />
       </UTooltip>
       <USeparator orientation="vertical" class="h-8" />
@@ -69,7 +72,7 @@ const items = computed<NavigationMenuItem[]>(() => [
     to: '#sobre',
     icon: 'gala:portrait2',
     active: route.path.startsWith('/docs/getting-started'),
-    class: 'mb-1 cursor-pointer ',
+    class: 'mb-1 cursor-pointer',
   },
   {
     label: 'Carreira',
