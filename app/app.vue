@@ -1,13 +1,13 @@
 <template>
   <UApp>
-    <UProvider :default-color-mode="'light'">
-      <UTooltipProvider>
-        <NuxtLayout>
-          <NuxtPage />
-        </NuxtLayout>
-      </UTooltipProvider>
-    </UProvider>
+    <ColorScheme default-color-scheme="light">
+      <UProvider>
+        <UTooltipProvider>
+          <NuxtLayout>
+            <NuxtPage />
+          </NuxtLayout>
+        </UTooltipProvider>
+      </UProvider>
+    </ColorScheme>
   </UApp>
 </template>
-
-<script setup lang="ts"></script>

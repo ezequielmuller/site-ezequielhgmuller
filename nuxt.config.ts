@@ -52,4 +52,9 @@ export default defineNuxtConfig({
     strict: true,
     typeCheck: true,
   },
+
+  colorMode: {
+    preference: 'light',
+    fallback: 'light',
+  },
 })
