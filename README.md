@@ -1,6 +1,6 @@
 # Site Pessoal - Ezequiel H. G. Muller
 
-Este é meu site pessoal criado por mim. Aqui você encontrará informações sobre mim, meus projetos, habilidades e formas de contato...
+Nesse site eu apresento minha trajetória profissional como Desenvolvedor FullStack, reunindo informações sobre minha carreira, experiências, habilidades técnicas, formação acadêmica e projetos desenvolvidos. O objetivo é compartilhar meu trabalho, destacar minhas competências e facilitar o contato para oportunidades profissionais e colaborações.
 
 ## Ferramentas e Tecnologias Utilizadas
 
