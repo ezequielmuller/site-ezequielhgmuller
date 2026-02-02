@@ -68,6 +68,6 @@ export default defineNuxtConfig({
 
   image: {
     provider: 'ipx',
-    domains: ['https://site-ezequielhgmuller.vercel.app/'],
+    domains: ['site-ezequielhgmuller.vercel.app'],
   },
 })
