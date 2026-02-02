@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     provider: 'ipx',
   },
   app: {
+    baseURL: '/',
     head: {
       title: 'Site Ezequiel Muller',
       htmlAttrs: {
@@ -39,19 +40,18 @@ export default defineNuxtConfig({
 
   devtools: { enabled: false },
   ssr: true,
-
   nitro: {
     preset: 'vercel',
     prerender: {
       crawlLinks: true,
       routes: ['/'],
     },
-    publicAssets: [
-      {
-        baseURL: '/',
-        dir: './public',
+    storage: {
+      public: {
+        driver: 'fs',
+        base: './public',
       },
-    ],
+    },
   },
 
   vite: {
