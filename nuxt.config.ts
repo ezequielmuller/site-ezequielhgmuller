@@ -5,7 +5,9 @@ export default defineNuxtConfig({
   components: true,
 
   compatibilityDate: '2025-07-15',
-
+  image: {
+    provider: 'ipx',
+  },
   app: {
     head: {
       title: 'Site Ezequiel Muller',
@@ -37,8 +39,9 @@ export default defineNuxtConfig({
 
   devtools: { enabled: false },
   ssr: false,
+
   nitro: {
-    preset: 'static',
+    preset: 'vercel',
   },
 
   vite: {
