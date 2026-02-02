@@ -82,6 +82,11 @@
                     class="w-10"
                   />
                   <NuxtImg
+                    src="/stack/pinia.svg"
+                    alt="Logo do Pinia"
+                    class="w-10"
+                  />
+                  <NuxtImg
                     src="/stack/java.svg"
                     alt="Logo do Java"
                     class="w-10"

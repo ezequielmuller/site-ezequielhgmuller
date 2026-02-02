@@ -2,7 +2,7 @@
   {
     "id": 1,
     "titulo": "E-commerce NegoMaq",
-    "descricaoCurta": "E-commerce de vendas de facas, artigos de churrasco e aventais.",
+    "descricaoCurta": "E-commerce de vendas de facas e artigos de churrasco.",
     "descricaoCompleta": "A plataforma foi criada para a venda de facas, estojos, aventais de couro e artigos para churrasco, e atualmente está 100% desenvolvida, integrada e pronta para entrar em operação.",
     "imagemPrincipal": "/projetos/app_negomaq/negomaq.png",
     "github": "https://github.com/ezequielhgmuller/negomaq",
@@ -27,7 +27,7 @@
   {
     "id": 2,
     "titulo": "Site Pessoal: Ezequiel H. G. Muller",
-    "descricaoCurta": "Site pessoal, onde você encontrará informações sobre mim, venha me conhecer.",
+    "descricaoCurta": "Site pessoal, onde você encontrará informações sobre mim.",
     "descricaoCompleta": "Nesse site eu apresento minha trajetória profissional como Desenvolvedor FullStack, reunindo informações sobre minha carreira, experiências, habilidades  técnicas, formação acadêmica e projetos desenvolvidos. O objetivo é compartilhar meu trabalho, destacar minhas competências e facilitar o contato para oportunidades profissionais e colaborações.",
     "imagemPrincipal": "/projetos/site_pessoal/logo.png",
     "github": "https://github.com/ezequielmuller/site-ezequielhgmuller",
