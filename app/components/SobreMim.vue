@@ -9,54 +9,67 @@
         Olá! Sou
         <span class="font-bold text-secondary"
           >Ezequiel Henrique Gazolla Muller</span
-        >. Tenho foco em <span class="font-bold">desenvolvimento web</span>,
-        <span class="font-bold">engenharia de software</span>,
-        <span class="font-bold">arquitetura de sistemas</span> e
-        <span class="font-bold">integração entre front-end e back-end</span>.
-        Atualmente estou aprofundando meus conhecimentos em TypeScript e NestJS,
-        com foco em backend moderno, boas práticas de arquitetura, APIs REST e
-        desenvolvimento de soluções escaláveis. Sou estudante de Ciência da
-        Computação e estou sempre em busca de evolução técnica por meio de
-        cursos, projetos próprios e estudo contínuo. Tenho interesse em
-        colaborar com equipes, aprender novas tecnologias e contribuir para o
-        desenvolvimento de produtos eficientes e bem estruturados.
+        >. Sou Desenvolvedor Full Stack com foco em
+        <span class="font-bold">JavaScript</span> e
+        <span class="font-bold">TypeScript</span>, tenho atuação profissional em
+        sistemas web, atualmente trabalho com Vue.js no front-end e Java no
+        back-end em sistemas legados. No meu dia a dia, atuo na implementação e
+        manutenção de funcionalidades, interfaces interativas, integração entre
+        camadas, criação de consultas SQL, desenvolvimento de APIs REST e
+        evolução de sistemas seguindo padrões arquiteturais já estabelecidos,
+        sempre com foco em código limpo, manutenção e escalabilidade.
+        <span class="font-bold"
+          >Atualmente, estou aprofundando meus conhecimentos em TypeScript,
+          NestJS e arquitetura de back-end.
+        </span>
       </p>
     </div>
     <!-- habilidades -->
-    <div
-      class="flex flex-wrap justify-center gap-4 mt-7 w-full max-w-4xl text-center items-center"
-    >
-      <h1 class="basis-full text-[22px] font-medium md:text-2xl">
-        Habilidades
+    <div class="mt-10 w-full max-w-5xl">
+      <h1 class="text-center text-[22px] font-medium md:text-2xl mb-6">
+        Tecnologias
       </h1>
-      <UMarquee reverse>
-        <NuxtImg
+
+      <div
+        class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 items-center justify-center"
+      >
+        <div
           v-for="(hab, idx) in habilidades"
           :key="idx"
-          :src="hab.src"
-          :alt="hab.label"
-          class="w-10"
-        />
-      </UMarquee>
+          class="group flex flex-col items-center justify-center gap-2 p-3 rounded-xl bg-white/40 dark:bg-gray-900/40 border border-gray-200/60 dark:border-gray-700/60 backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:border-gray-300 dark:hover:border-gray-600"
+        >
+          <NuxtImg
+            :src="hab.src"
+            :alt="hab.label"
+            class="w-9 h-9 object-contain transition-transform duration-300 group-hover:scale-110"
+          />
+
+          <span
+            class="text-xs font-medium text-gray-700/80 dark:text-gray-300/80 tracking-wide"
+          >
+            {{ hab.label }}
+          </span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-  const habilidades = [
-    { label: 'Git', src: '/stack/git.svg' },
-    { label: 'TailwindCSS', src: '/stack/tailwindcss.svg' },
-    { label: 'JavaScript', src: '/stack/javascript.svg' },
-    { label: 'TypeScript', src: '/stack/typescript.svg' },
-    { label: 'Nest.js', src: '/stack/nest.svg' },
-    { label: 'PostgreSQL', src: '/stack/postgresql.svg' },
-    { label: 'MySQL', src: '/stack/mysql.png' },
-    { label: 'Quasar Framework', src: '/stack/quasar.png' },
-    { label: 'Vue.js', src: '/stack/vue.svg' },
-  ]
+const habilidades = [
+  { label: 'Git', src: '/stack/git.svg' },
+  { label: 'TailwindCSS', src: '/stack/tailwindcss.svg' },
+  { label: 'JavaScript', src: '/stack/javascript.svg' },
+  { label: 'TypeScript', src: '/stack/typescript.svg' },
+  { label: 'Nest.js', src: '/stack/nest.svg' },
+  { label: 'PostgreSQL', src: '/stack/postgresql.svg' },
+  { label: 'MySQL', src: '/stack/mysql.png' },
+  { label: 'Quasar Framework', src: '/stack/quasar.png' },
+  { label: 'Vue.js', src: '/stack/vue.svg' },
+]
 </script>
 <style scoped>
-  .text-primary-600 {
-    color: #3b82f6;
-    /* Azul Tailwind */
-  }
+.text-primary-600 {
+  color: #3b82f6;
+  /* Azul Tailwind */
+}
 </style>
