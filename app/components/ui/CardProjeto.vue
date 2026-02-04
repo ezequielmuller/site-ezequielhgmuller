@@ -1,88 +1,88 @@
 <template>
   <UCard variant="subtle" class="w-full rounded-2xl">
     <template #header>
-      <div class="flex items-center justify-center gap-2">
-        <UIcon name="proicons:layers" class="size-5" />
-        <span class="font-medium text-[17px]">
-          {{ projeto.titulo }}
-        </span>
-      </div>
-
-      <div class="my-2 text-center">
-        {{ projeto.descricaoCurta }}
-      </div>
-
-      <div class="flex justify-center">
+      <div class="flex items-center justify-start gap-2">
         <NuxtImg
           :src="projeto.imagemPrincipal"
           :alt="projeto.titulo"
           :class="projeto.classImgPrincipal"
         />
+        <UIcon name="proicons:layers" class="size-5" />
+        <span class="font-medium text-[17px]">
+          {{ projeto.titulo }}
+        </span>
       </div>
     </template>
-
-    <!-- Modal -->
-    <template #footer>
-      <UModal :title="projeto.titulo" :close="{ class: 'cursor-pointer' }">
-        <div class="flex justify-end">
+    <Placeholder>
+      <p class="text-justify mb-4">
+        {{ projeto.descricao }}
+      </p>
+      <div class="flex justify-evenly mb-4">
+        <UModal title="Imagens do Projeto" :close="{ class: 'cursor-pointer' }">
           <UButton
-            label="Ver detalhes"
-            icon="mono-icons:expand"
-            :class="projeto.classBotao"
+            color="neutral"
+            variant="outline"
+            target="_blank"
+            icon="entypo:camera"
+            aria-label="Imagens"
+            label="Ver Imagens"
+            class="hover:text-yellow-500 hover:border-yellow-500 cursor-pointer"
           />
-        </div>
 
-        <template #body>
-          <p class="text-justify mb-4">
-            {{ projeto.descricaoCompleta }}
-          </p>
+          <template #body>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div
+                v-for="(img, index) in projeto.imagens"
+                :key="index"
+                class="flex items-center justify-center rounded-xl"
+              >
+                <NuxtImg
+                  :src="img"
+                  :alt="projeto.titulo"
+                  :class="projeto.classImg"
+                  class="w-full max-h-[620px] object-contain"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </template>
+        </UModal>
 
-          <p class="mb-1">
-            Github:
-            <a
-              :href="projeto.github"
-              target="_blank"
-              class="underline text-secondary-600 break-all"
-            >
-              {{ projeto.github }}
-            </a>
-          </p>
+        <UButton
+          color="neutral"
+          variant="outline"
+          :to="projeto.github"
+          target="_blank"
+          icon="i-simple-icons-github"
+          aria-label="GitHub"
+          label="Ver no GitHub"
+          class="hover:text-green-600 hover:border-green-600"
+        />
 
-          <p class="mb-6">
-            LinkedIn:
-            <a
-              :href="projeto.linkedin"
-              target="_blank"
-              class="underline text-secondary-600 break-all"
-            >
-              {{ projeto.linkedin }}
-            </a>
-          </p>
+        <UButton
+          color="neutral"
+          variant="outline"
+          :to="projeto.github"
+          target="_blank"
+          icon="entypo-social:linkedin"
+          aria-label="GitHub"
+          label="Ver no Linkedin"
+          class="hover:text-blue-600 hover:border-blue-600"
+        />
+      </div>
 
-          <USeparator />
+      <USeparator />
 
-          <div class="flex justify-center gap-4 my-4">
-            <NuxtImg
-              v-for="tech in projeto.stack"
-              :key="tech.nome"
-              :src="tech.icon"
-              :alt="tech.nome"
-              class="w-10"
-            />
-          </div>
-
-          <div class="grid grid-cols-2 gap-4 mb-8">
-            <NuxtImg
-              v-for="(img, index) in projeto.imagens"
-              :key="index"
-              :src="img"
-              :alt="projeto.titulo"
-              :class="projeto.classImg"
-            />
-          </div>
-        </template>
-      </UModal>
-    </template>
+      <div class="flex justify-center gap-4 my-4">
+        <NuxtImg
+          v-for="tech in projeto.stack"
+          :key="tech.nome"
+          :src="tech.icon"
+          :alt="tech.nome"
+          class="w-8"
+        />
+      </div>
+    </Placeholder>
   </UCard>
 </template>
 

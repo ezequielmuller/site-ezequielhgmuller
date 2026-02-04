@@ -96,7 +96,7 @@
             class="flex items-center gap-4 transition-all duration-300 hover:translate-x-2 cursor-pointer group"
           >
             <UIcon
-              name="entypo-social:google"
+              name="mdi:gmail"
               class="size-6 text-red-500 group-hover:scale-110 transition-transform"
             />
             <div class="flex-1">

@@ -1,8 +1,7 @@
 export interface Projeto {
   id: number
   titulo: string
-  descricaoCurta: string
-  descricaoCompleta: string
+  descricao: string
   imagemPrincipal: string
   github: string
   linkedin: string
