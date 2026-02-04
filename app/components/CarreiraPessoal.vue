@@ -6,12 +6,14 @@
     >
       <div class="w-full md:w-1/2 max-w-md flex flex-col items-center">
         <div class="text-[22px] font-medium md:text-2xl mb-4">Formação</div>
-        <UTimeline
-          :default-value="2"
-          :items="timelineFormacao"
-          class="w-full break-words whitespace-normal"
-          color="secondary"
-        />
+        <div class="flex items-center">
+          <UTimeline
+            :default-value="2"
+            :items="timelineFormacao"
+            class="w-full break-words whitespace-normal"
+            color="secondary"
+          />
+        </div>
       </div>
       <div class="w-full md:w-1/2 max-w-md flex flex-col items-center">
         <h1 class="text-[22px] font-medium md:text-2xl mb-4">Experiência</h1>
@@ -19,87 +21,47 @@
           <template #header>
             <div class="flex items-center gap-2">
               <UIcon name="clarity:briefcase-line" class="size-5" />
-              <span class="font-medium text-[17px]">Gazzi Sistemas</span>
+              <span class="font-medium text-[17px]"
+                >Gazzi Sistemas - Desenvolvedor FullStack Jr</span
+              >
             </div>
-            <div class="font-medium">
-              Desenvolvedor FullStack Jr<br />
-              <span class="font-normal">
-                Fev de 2025 - O momento | {{ calcularPeriodo(1) }}<br />
-                Remoto - Tempo Integral<br />
-                Cascavel, Paraná, Brasil
-              </span>
+            <span class="font-normal">
+              Fev de 2025 - O momento | {{ calcularPeriodo(1) }}<br />
+              Remoto - Tempo Integral<br />
+            </span>
+          </template>
+          <Placeholder>
+            <div class="text-justify">
+              - Trabalho na implementação e manutenção de funcionalidades,
+              criação de interfaces intuitivas e consultas SQL além do
+              desenvolvimento de APIs seguindo padrões arquiteturais
+              existentes...<br />
+              - Me tornei o principal desenvolvedor de um sistema de prefeituras
+              com módulos de auditorias públicas, controle interno, fiscalização
+              e almoxarifado.<br />
             </div>
-          </template>
-          <template #footer>
-            <UModal
-              :transition="true"
-              title="Desenvolvedor FullStack Jr"
-              :close="{ class: 'cursor-pointer' }"
-            >
-              <div class="flex justify-end">
-                <UButton
-                  icon="mono-icons:expand"
-                  label="Ver detalhes"
-                  class="cursor-pointer text-white bg-blue-600 hover:bg-secondary transition-all duration-300 hover:-translate-y-1"
-                />
-              </div>
-              <template #body>
-                <div class="flex text-justify">
-                  - Atuando profissionalmente com Vue.js (Quasar Framework) no
-                  front-end e Java (JDBC, Servlets e DAO) com API REST e
-                  PostgreSQL no back-end. Trabalho na implementação e manutenção
-                  de funcionalidades, integração entre front-end e back-end,
-                  criação de consultas SQL e desenvolvimento de APIs seguindo
-                  padrões arquiteturais existentes..<br />
-                  <br />
-                  - Desenvolvemos uma solução para o comércio focado no varejo
-                  trazendo mais facilidade e simplicidade para o logista desde a
-                  compra ate a entrega de mercadorias e gestão da loja.<br />
-                  <br />
-                  - Me tornei uns dos principais desenvolvedores de um sistema
-                  de auditorias públicas, controle interno e de fiscalização,
-                  todos eles focados para prefeituras municipais<br />
-                </div>
-                <div class="flex justify-center items-center mt-2 gap-4">
-                  <NuxtImg
-                    src="/stack/git.svg"
-                    alt="Logo do Git"
-                    class="w-10"
-                  />
-                  <NuxtImg
-                    src="/stack/javascript.svg"
-                    alt="Logo do Vue"
-                    class="w-10"
-                  />
-                  <NuxtImg
-                    src="/stack/vue.svg"
-                    alt="Logo do Vue"
-                    class="w-10"
-                  />
-                  <NuxtImg
-                    src="/stack/quasar.png"
-                    alt="Logo do Quasar"
-                    class="w-10"
-                  />
-                  <NuxtImg
-                    src="/stack/pinia.svg"
-                    alt="Logo do Pinia"
-                    class="w-10"
-                  />
-                  <NuxtImg
-                    src="/stack/java.svg"
-                    alt="Logo do Java"
-                    class="w-10"
-                  />
-                  <NuxtImg
-                    src="/stack/postgresql.svg"
-                    alt="Logo do PostgreSQL"
-                    class="w-10"
-                  />
-                </div>
-              </template>
-            </UModal>
-          </template>
+            <div class="flex justify-center items-center mt-2 gap-4">
+              <NuxtImg src="/stack/git.svg" alt="Logo do Git" class="w-8" />
+              <NuxtImg
+                src="/stack/javascript.svg"
+                alt="Logo do JavaScript"
+                class="w-8"
+              />
+              <NuxtImg src="/stack/vue.svg" alt="Logo do Vue" class="w-8" />
+              <NuxtImg
+                src="/stack/quasar.png"
+                alt="Logo do Quasar"
+                class="w-8"
+              />
+              <NuxtImg src="/stack/pinia.svg" alt="Logo do Pinia" class="w-8" />
+              <NuxtImg src="/stack/java.svg" alt="Logo do Java" class="w-8" />
+              <NuxtImg
+                src="/stack/postgresql.svg"
+                alt="Logo do PostgreSQL"
+                class="w-8"
+              />
+            </div>
+          </Placeholder>
         </UCard>
       </div>
     </div>
