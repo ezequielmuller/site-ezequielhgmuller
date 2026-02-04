@@ -17,7 +17,7 @@
       <p class="text-justify mb-4">
         {{ projeto.descricao }}
       </p>
-      <div class="flex justify-evenly mb-4">
+      <div class="flex justify-evenly mb-4 gap-1">
         <UModal title="Imagens do Projeto" :close="{ class: 'cursor-pointer' }">
           <UButton
             color="neutral"
@@ -57,17 +57,6 @@
           aria-label="GitHub"
           label="Ver no GitHub"
           class="hover:text-green-600 hover:border-green-600"
-        />
-
-        <UButton
-          color="neutral"
-          variant="outline"
-          :to="projeto.github"
-          target="_blank"
-          icon="entypo-social:linkedin"
-          aria-label="GitHub"
-          label="Ver no Linkedin"
-          class="hover:text-blue-600 hover:border-blue-600"
         />
       </div>
 
