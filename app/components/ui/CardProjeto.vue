@@ -7,7 +7,7 @@
           :alt="projeto.titulo"
           :class="projeto.classImgPrincipal"
         />
-        <UIcon name="proicons:layers" class="size-5" />
+        <!-- <UIcon name="proicons:layers" class="size-5" /> -->
         <span class="font-medium text-[17px]">
           {{ projeto.titulo }}
         </span>
