@@ -66,6 +66,7 @@ import type { NavigationMenuItem } from '@nuxt/ui'
 
 // Rotas do menu
 const route = useRoute()
+
 const items = computed<NavigationMenuItem[]>(() => [
   {
     label: 'Sobre Mim',
@@ -93,5 +94,16 @@ const items = computed<NavigationMenuItem[]>(() => [
     to: '#contato',
     class: 'mb-1 cursor-pointer',
   },
+  {
+    label: 'Currículo',
+    to: '/curriculo.pdf',
+    target: '_blank',
+    icon: 'i-heroicons-document-text-20-solid',
+    class: 'hover:text-gray-700',
+  },
 ])
+
+const abrirCurriculo = () => {
+  window.open('/curriculo.pdf', '_blank')
+}
 </script>
