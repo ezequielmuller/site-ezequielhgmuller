@@ -7,7 +7,7 @@
 
   <div class="flex justify-center px-4 md:px-0">
     <div
-      class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch"
+      class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch"
     >
       <UCard variant="subtle" class="flex flex-col rounded-2xl">
         <template #header>
